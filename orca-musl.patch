@@ -1,0 +1,36 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 DH0516
+# <sys/unistd.h> is glibc-only; POSIX specifies <unistd.h>. select() needs <sys/select.h>, which glibc pulls in transitively but musl does not.
+--- a/deps_src/mdns/cxmdns.cpp
++++ b/deps_src/mdns/cxmdns.cpp
+@@ -17,6 +17,8 @@
+ #include <netdb.h>
+ #include <ifaddrs.h>
+ #include <net/if.h>
++#include <sys/select.h>
++#include <sys/time.h>
+ #endif
+ 
+ // Alias some things to simulate recieving data to fuzz library
+--- a/deps_src/mdns/mdns.c
++++ b/deps_src/mdns/mdns.c
+@@ -16,6 +16,8 @@
+ #include <netdb.h>
+ #include <ifaddrs.h>
+ #include <net/if.h>
++#include <sys/select.h>
++#include <sys/time.h>
+ #endif
+ 
+ // Alias some things to simulate recieving data to fuzz library
+--- a/src/slic3r/Utils/Serial.cpp
++++ b/src/slic3r/Utils/Serial.cpp
+@@ -45,7 +45,7 @@
+ #ifndef _WIN32
+ 	#include <sys/ioctl.h>
+ 	#include <sys/time.h>
+-	#include <sys/unistd.h>
++	#include <unistd.h>
+ 	#include <sys/select.h>
+ #endif
+ 

@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: wxWindows
+# Copyright (c) 2026 DH0516
+# Source: SoftFever/Orca-deps-wxWidgets v3.3.2, build/cmake/init.cmake.
+# Legacy Mesa supplies GLX through libGL.so without separate GLVND libraries.
+--- a/build/cmake/init.cmake
++++ b/build/cmake/init.cmake
+@@ -544,7 +544,7 @@
+                     list(APPEND OPENGL_LIBRARIES ${WAYLANDEGL_LIBRARIES})
+                 endif()
+             endif()
+-            if(X11_FOUND AND OpenGL_GLX_FOUND)
++            if(X11_FOUND AND (OpenGL_GLX_FOUND OR OPENGL_gl_LIBRARY))
+                 # toolkit.cmake calls find_package(X11) if X11 support is needed
+                 set(wxHAS_GLX 1)
+             endif()

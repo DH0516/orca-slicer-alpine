@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: BSD-3-Clause
+# Copyright (c) 2026 DH0516
+# For pinned c-blosc v1.17.0 (upstream master refactored this file instead of patching it). C23 made bool a keyword, so the C99 _Bool typedef must be skipped when __STDC_VERSION__ >= 202311L.
+--- a/blosc/shuffle.c
++++ b/blosc/shuffle.c
+@@ -20,7 +20,9 @@
+ #endif
+ 
+ /* Visual Studio < 2013 does not have stdbool.h so here it is a replacement: */
+-#if defined __STDC__ && defined __STDC_VERSION__ && __STDC_VERSION__ >= 199901L
++#if defined __STDC__ && defined __STDC_VERSION__ && __STDC_VERSION__ >= 202311L
++/* C23 or later: bool is a keyword, nothing to do */
++#elif defined __STDC__ && defined __STDC_VERSION__ && __STDC_VERSION__ >= 199901L
+ /* have a C99 compiler */
+ typedef _Bool bool;
+ #else

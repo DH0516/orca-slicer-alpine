@@ -1,0 +1,44 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 DH0516
+# Use Alpine OpenSSL 3 instead of bundling the pre-3.0 license.
+--- a/deps/CMakeLists.txt
++++ b/deps/CMakeLists.txt
+@@ -360,15 +360,9 @@
+ include(Draco/Draco.cmake)
+ 
+ 
+-# I *think* 1.1 is used for *just* md5 hashing?
+-# 3.1 has everything in the right place, but the md5 funcs used are deprecated
+-# a grep across the repo shows it is used for other things
+-# TODO: update openssl and everything that uses <openssl/md5.h>
++set(OPENSSL_USE_STATIC_LIBS OFF)
++find_package(OpenSSL 3...<4 REQUIRED)
+ set(OPENSSL_PKG "")
+-if(NOT OPENSSL_FOUND)
+-    include(OpenSSL/OpenSSL.cmake)
+-    set(OPENSSL_PKG dep_OpenSSL)
+-endif()
+ 
+ # we don't want to load a "wrong" openssl when loading curl
+ # so, just don't even bother
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -629,7 +629,8 @@
+ # The Intel TBB library will use the std::exception_ptr feature of C++11.
+ # add_definitions(-DTBB_USE_CAPTURED_EXCEPTION=0)
+ 
+-find_package(OpenSSL REQUIRED)
++set(OPENSSL_USE_STATIC_LIBS OFF)
++find_package(OpenSSL 3...<4 REQUIRED)
+ find_package(CURL REQUIRED)
+ find_package(Freetype REQUIRED)
+ 
+@@ -660,7 +661,7 @@
+     if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+         # As of now, our build system produces a statically linked libcurl,
+         # which links the OpenSSL library dynamically.
+-        find_package(OpenSSL REQUIRED)
++        find_package(OpenSSL 3...<4 REQUIRED)
+         message("OpenSSL include dir: ${OPENSSL_INCLUDE_DIR}")
+         message("OpenSSL libraries: ${OPENSSL_LIBRARIES}")
+         target_include_directories(libcurl SYSTEM INTERFACE ${OPENSSL_INCLUDE_DIR})

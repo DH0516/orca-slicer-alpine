@@ -1,0 +1,27 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2026 DH0516
+# Backport of upstream oneTBB musl fixes to 2021.5.0.
+# Hunk 1 (RTLD_DEEPBIND): https://github.com/uxlfoundation/oneTBB/pull/684
+# Hunk 2 (resumable tasks): same condition as upstream master, include/oneapi/tbb/detail/_config.h
+--- a/src/tbb/dynamic_link.cpp
++++ b/src/tbb/dynamic_link.cpp
+@@ -413,7 +413,7 @@
+         int flags = RTLD_NOW;
+         if (local_binding) {
+             flags = flags | RTLD_LOCAL;
+-#if __linux__ && !__ANDROID__ && !__TBB_USE_SANITIZERS
++#if (__linux__ && __GLIBC__) && !__ANDROID__ && !__TBB_USE_SANITIZERS
+             flags = flags | RTLD_DEEPBIND;
+ #endif
+         } else {
+--- a/include/oneapi/tbb/detail/_config.h
++++ b/include/oneapi/tbb/detail/_config.h
+@@ -268,7 +268,7 @@
+     #define __TBB_CPP20_COMPARISONS_PRESENT __TBB_CPP20_PRESENT
+ #endif
+ 
+-#define __TBB_RESUMABLE_TASKS                           (!__TBB_WIN8UI_SUPPORT && !__ANDROID__ && !__QNXNTO__)
++#define __TBB_RESUMABLE_TASKS                           (!__TBB_WIN8UI_SUPPORT && !__ANDROID__ && !__QNXNTO__ && (!__linux__ || __GLIBC__))
+ 
+ /* This macro marks incomplete code or comments describing ideas which are considered for the future.
+  * See also for plain comment with TODO and FIXME marks for small improvement opportunities.

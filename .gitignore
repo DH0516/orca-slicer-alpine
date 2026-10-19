@@ -1,0 +1,8 @@
+# abuild artifacts
+src/
+pkg/
+*.apk
+*.tar.gz
+# failed patches
+*.rej
+*.orig

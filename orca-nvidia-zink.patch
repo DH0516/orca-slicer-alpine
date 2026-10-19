@@ -1,0 +1,65 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 DH0516
+# Logic ported from the Arch AUR orca-slicer launcher (orca-slicer.sh), rewritten in-process so no wrapper is needed:
+# https://aur.archlinux.org/packages/orca-slicer
+--- a/src/OrcaSlicer.cpp
++++ b/src/OrcaSlicer.cpp
+@@ -7531,6 +7531,42 @@
+     }
+ }
+ #else /* _MSC_VER */
++// True when running on Wayland with an NVIDIA GPU on driver > 555, where
++// OrcaSlicer's GL init is known to crash. Reads sysfs only, so it needs
++// no GL context and is safe to run before anything else. Replaces the old
++// launcher-script check (same conditions, no glxinfo needed). sysfs_root
++// exists for testing; production callers pass nothing.
++static bool nvidia_wayland_needs_zink(const char *sysfs_root = "/sys")
++{
++    char path[128];
++    const char *session = ::getenv("XDG_SESSION_TYPE");
++    if (session == nullptr || std::strcmp(session, "wayland") != 0)
++        return false;
++    const char *no_zink = ::getenv("ZINK_DISABLE_OVERRIDE");
++    if (no_zink != nullptr && std::strcmp(no_zink, "1") == 0)
++        return false;
++    bool have_nvidia = false;
++    for (int card = 0; card < 16 && ! have_nvidia; ++ card) {
++        std::snprintf(path, sizeof(path), "%s/class/drm/card%d/device/vendor", sysfs_root, card);
++        FILE *f = std::fopen(path, "r");
++        if (f == nullptr)
++            continue;
++        char vendor[16] = { 0 };
++        if (std::fgets(vendor, sizeof(vendor), f) != nullptr && std::strstr(vendor, "10de") != nullptr)
++            have_nvidia = true;
++        std::fclose(f);
++    }
++    if (! have_nvidia)
++        return false;
++    std::snprintf(path, sizeof(path), "%s/module/nvidia/version", sysfs_root);
++    FILE *f = std::fopen(path, "r");
++    if (f == nullptr)
++        return false;
++    int major = 0;
++    bool ok = std::fscanf(f, "%d", &major) == 1;
++    std::fclose(f);
++    return ok && major > 555;
++}
+ int main(int argc, char **argv)
+ {
+ #ifndef _WIN32
+@@ -7540,6 +7576,15 @@
+     // OrcaSlicer with SIGPIPE (exit 141) and produces no crash report.
+     std::signal(SIGPIPE, SIG_IGN);
+ #endif
++    if (nvidia_wayland_needs_zink()) {
++        // Same variables the old launcher script set. Overwrite is 0 so
++        // explicit user settings still win.
++        ::setenv("__GLX_VENDOR_LIBRARY_NAME", "mesa", 0);
++        ::setenv("__EGL_VENDOR_LIBRARY_FILENAMES", "/usr/share/glvnd/egl_vendor.d/50_mesa.json", 0);
++        ::setenv("MESA_LOADER_DRIVER_OVERRIDE", "zink", 0);
++        ::setenv("GALLIUM_DRIVER", "zink", 0);
++        ::setenv("WEBKIT_DISABLE_DMABUF_RENDERER", "1", 0);
++    }
+     return CLI().run(argc, argv);
+ }
+ #endif /* _MSC_VER */

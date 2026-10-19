@@ -1,0 +1,883 @@
+SPDXVersion: SPDX-2.3
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: orca-slicer-alpine-2.4.2-r0
+DocumentNamespace: https://github.com/DH0516/orca-slicer-alpine/sbom/2.4.2-r0
+LicenseListVersion: 3.25
+Creator: Person: DH0516
+Creator: Tool: manual-audit-2026-10-16
+Created: 2026-10-16T19:04:20Z
+DocumentComment: License inventory for the orca-slicer 2.4.2-r0 Alpine aport. Application declared license: AGPL-3.0-only. This inventory does not establish binary distribution compliance. Vendored sources were license-checked in the v2.4.2 tarball; superbuild downloads are pinned by URL plus SHA256 with licenses per each upstream project's stated license. The non-free Bambu networking plugin is excluded and intentionally has no entry here. Human-readable companion: SBOM.md.
+
+PackageName: orca-slicer-alpine
+SPDXID: SPDXRef-Packaging
+PackageVersion: 2.4.2-r0
+PackageDownloadLocation: https://api.github.com/repos/DH0516/orca-slicer-alpine/releases/assets/654543022
+FilesAnalyzed: false
+PackageChecksum: SHA256: 6896214d94a100d8a1e0077b564ae183108f7864f9e4c2b57f5505069cb75f92
+PackageLicenseConcluded: MIT AND AGPL-3.0-only AND Apache-2.0 AND LGPL-2.1-only AND BSD-3-Clause AND wxWindows
+PackageLicenseDeclared: MIT AND AGPL-3.0-only AND Apache-2.0 AND LGPL-2.1-only AND BSD-3-Clause AND wxWindows
+PackageCopyrightText: Copyright (c) 2026 DH0516
+PackageComment: The packaging itself (APKBUILD, patches, CMake snippet). Split-licensed per file; see README.md License and LICENSES/. Source archive orca-slicer-alpine-2.4.2-r0-source.tar.gz contains the original packaging snapshot for APK build identifier d7ef4c2803583e283aedf46551bd853a1cb1fc7c. The current release tag starts a new Git history; the APKs and their build inputs are unchanged. The GitHub asset API returns the archive with Accept: application/octet-stream.
+
+PackageName: OrcaSlicer
+SPDXID: SPDXRef-OrcaSlicer
+PackageVersion: 2.4.2
+PackageDownloadLocation: https://codeload.github.com/OrcaSlicer/OrcaSlicer/tar.gz/refs/tags/v2.4.2
+FilesAnalyzed: false
+PackageChecksum: SHA512: 284dcb10e21d926046bc64c2454ea1c918e15414f762e3d74ff27a0745261bcd11ad86cd66d7e51a5bf41f088691630567b5a968c91ff74bed15486033537327
+PackageLicenseConcluded: AGPL-3.0-only
+PackageLicenseDeclared: AGPL-3.0-only
+PackageCopyrightText: NOASSERTION
+PackageComment: Upstream application (SoftFever and contributors). In-tree pressure-advance calibration pattern is GPL-3.0 per upstream README.
+
+PackageName: c-blosc
+SPDXID: SPDXRef-Dep-Blosc
+PackageVersion: v1.17.0_tm
+PackageDownloadLocation: https://github.com/tamasmeszaros/c-blosc/archive/refs/heads/v1.17.0_tm.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: dcb48bf43a672fa3de6a4b1de2c4c238709dad5893d1e097b8374ad84b1fc3b3
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseDeclared: BSD-3-Clause
+PackageCopyrightText: NOASSERTION
+
+PackageName: Boost
+SPDXID: SPDXRef-Dep-Boost
+PackageVersion: 1.84.0
+PackageDownloadLocation: https://github.com/boostorg/boost/releases/download/boost-1.84.0/boost-1.84.0.tar.gz
+FilesAnalyzed: false
+PackageChecksum: SHA256: 4d27e9efed0f6f152dc28db6430b9d3dfb40c0345da7342eaa5a987dde57bd95
+PackageLicenseConcluded: BSL-1.0
+PackageLicenseDeclared: BSL-1.0
+PackageCopyrightText: NOASSERTION
+
+PackageName: cereal
+SPDXID: SPDXRef-Dep-Cereal
+PackageVersion: 1.3.0
+PackageDownloadLocation: https://github.com/USCiLab/cereal/archive/refs/tags/v1.3.0.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: 71642cb54658e98c8f07a0f0d08bf9766f1c3771496936f6014169d3726d9657
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseDeclared: BSD-3-Clause
+PackageCopyrightText: NOASSERTION
+
+PackageName: CGAL
+SPDXID: SPDXRef-Dep-CGAL
+PackageVersion: 5.6.3
+PackageDownloadLocation: https://github.com/CGAL/cgal/releases/download/v5.6.3/CGAL-5.6.3.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: 5d577acb4a9918ccb960491482da7a3838f8d363aff47e14d703f19fd84733d4
+PackageLicenseConcluded: GPL-3.0-or-later
+PackageLicenseDeclared: GPL-3.0-or-later
+PackageCopyrightText: NOASSERTION
+PackageComment: Combines under AGPL-3.0-only via GPLv3 section 13.
+
+PackageName: curl
+SPDXID: SPDXRef-Dep-CURL
+PackageVersion: 7.75.0
+PackageDownloadLocation: https://github.com/curl/curl/archive/refs/tags/curl-7_75_0.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: a63ae025bb0a14f119e73250f2c923f4bf89aa93b8d4fafa4a9f5353a96a765a
+PackageLicenseConcluded: curl
+PackageLicenseDeclared: curl
+PackageCopyrightText: NOASSERTION
+
+PackageName: Draco
+SPDXID: SPDXRef-Dep-Draco
+PackageVersion: 1.5.7
+PackageDownloadLocation: https://github.com/google/draco/archive/refs/tags/1.5.7.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: 27b72ba2d5ff3d0a9814ad40d4cb88f8dc89a35491c0866d952473f8f9416b77
+PackageLicenseConcluded: Apache-2.0
+PackageLicenseDeclared: Apache-2.0
+PackageCopyrightText: NOASSERTION
+
+PackageName: Eigen
+SPDXID: SPDXRef-Dep-Eigen
+PackageVersion: 5.0.1
+PackageDownloadLocation: https://gitlab.com/libeigen/eigen/-/archive/5.0.1/eigen-5.0.1.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: 0dbb1f9e3aaad66f352c03227d8c983f6f0b49e0b07e71a7300f4abcc01aee12
+PackageLicenseConcluded: MPL-2.0
+PackageLicenseDeclared: MPL-2.0
+PackageCopyrightText: NOASSERTION
+
+PackageName: expat
+SPDXID: SPDXRef-Dep-Expat
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored in the upstream tarball at deps/EXPAT/expat/; license read from its COPYING.
+
+PackageName: freetype
+SPDXID: SPDXRef-Dep-Freetype
+PackageVersion: 2.12.1
+PackageDownloadLocation: https://github.com/SoftFever/orca_deps/releases/download/freetype-2.12.1.tar.gz/freetype-2.12.1.tar.gz
+FilesAnalyzed: false
+PackageChecksum: SHA256: efe71fd4b8246f1b0b1b9bfca13cfff1c9ad85930340c27df469733bbb620938
+PackageLicenseConcluded: FTL
+PackageLicenseDeclared: FTL
+PackageCopyrightText: NOASSERTION
+
+PackageName: GLEW
+SPDXID: SPDXRef-Dep-GLEW
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: BSD-3-Clause AND MIT
+PackageLicenseDeclared: BSD-3-Clause AND MIT
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored in the upstream tarball at deps/GLEW/glew/; license read from its LICENSE.txt (BSD core, MIT Mesa and Khronos parts).
+
+PackageName: GLFW
+SPDXID: SPDXRef-Dep-GLFW
+PackageVersion: 3.4
+PackageDownloadLocation: https://github.com/glfw/glfw/archive/refs/tags/3.4.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: a133ddc3d3c66143eba9035621db8e0bcf34dba1ee9514a9e23e96afd39fd57a
+PackageLicenseConcluded: Zlib
+PackageLicenseDeclared: Zlib
+PackageCopyrightText: NOASSERTION
+
+PackageName: GMP
+SPDXID: SPDXRef-Dep-GMP
+PackageVersion: 6.2.1
+PackageDownloadLocation: https://github.com/SoftFever/OrcaSlicer_deps/releases/download/gmp-6.2.1/gmp-6.2.1.tar.bz2
+FilesAnalyzed: false
+PackageChecksum: SHA256: eae9326beb4158c386e39a356818031bd28f3124cf915f8c5b1dc4c7a36b4d7c
+PackageLicenseConcluded: LGPL-3.0-or-later
+PackageLicenseDeclared: LGPL-3.0-or-later
+PackageCopyrightText: NOASSERTION
+PackageComment: Library use; combines under AGPL-3.0-only via GPLv3 section 13.
+
+PackageName: libjpeg-turbo
+SPDXID: SPDXRef-Dep-JPEG
+PackageVersion: 3.0.1
+PackageDownloadLocation: https://github.com/libjpeg-turbo/libjpeg-turbo/archive/refs/tags/3.0.1.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: d6d99e693366bc03897677650e8b2dfa76b5d6c54e2c9e70c03f0af821b0a52f
+PackageLicenseConcluded: IJG AND BSD-3-Clause AND Zlib
+PackageLicenseDeclared: IJG AND BSD-3-Clause AND Zlib
+PackageCopyrightText: NOASSERTION
+
+PackageName: libnoise
+SPDXID: SPDXRef-Dep-Libnoise
+PackageVersion: 1.0
+PackageDownloadLocation: https://github.com/SoftFever/Orca-deps-libnoise/archive/refs/tags/1.0.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: 96ffd6cc47898dd8147aab53d7d1b1911b507d9dbaecd5613ca2649468afd8b6
+PackageLicenseConcluded: LGPL-2.1-or-later
+PackageLicenseDeclared: LGPL-2.1-or-later
+PackageCopyrightText: NOASSERTION
+
+PackageName: MPFR
+SPDXID: SPDXRef-Dep-MPFR
+PackageVersion: 4.2.2
+PackageDownloadLocation: https://ftp.gnu.org/gnu/mpfr/mpfr-4.2.2.tar.bz2
+FilesAnalyzed: false
+PackageChecksum: SHA256: 9ad62c7dc910303cd384ff8f1f4767a655124980bb6d8650fe62c815a231bb7b
+PackageLicenseConcluded: LGPL-3.0-or-later
+PackageLicenseDeclared: LGPL-3.0-or-later
+PackageCopyrightText: NOASSERTION
+PackageComment: Combines under AGPL-3.0-only via GPLv3 section 13.
+
+PackageName: NanoSVG
+SPDXID: SPDXRef-Dep-NanoSVG
+PackageVersion: 863f6aa97ef62028126fa2c19bd4350394c2e15e
+PackageDownloadLocation: https://github.com/SoftFever/nanosvg/archive/863f6aa97ef62028126fa2c19bd4350394c2e15e.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: 8d9c1624ad6518dd6dfa31e4f8dc7da9ec243d88bae595c7a037450617fec851
+PackageLicenseConcluded: Zlib
+PackageLicenseDeclared: Zlib
+PackageCopyrightText: NOASSERTION
+
+PackageName: NLopt
+SPDXID: SPDXRef-Dep-NLopt
+PackageVersion: 2.5.0
+PackageDownloadLocation: https://github.com/stevengj/nlopt/archive/v2.5.0.tar.gz
+FilesAnalyzed: false
+PackageChecksum: SHA256: c6dd7a5701fff8ad5ebb45a3dc8e757e61d52658de3918e38bab233e7fd3b4ae
+PackageLicenseConcluded: MIT AND LGPL-2.1-or-later
+PackageLicenseDeclared: MIT AND LGPL-2.1-or-later
+PackageCopyrightText: NOASSERTION
+PackageComment: The pinned COPYING identifies the combined library as LGPL-2.1-or-later, with MIT portions. Original algorithm notices are installed through license-files.txt.
+
+PackageName: OCCT
+SPDXID: SPDXRef-Dep-OCCT
+PackageVersion: 7.6.0
+PackageDownloadLocation: https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V7_6_0.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: 28334f0e98f1b1629799783e9b4d21e05349d89e695809d7e6dfa45ea43e1dbc
+PackageLicenseConcluded: LGPL-2.1-only
+PackageLicenseDeclared: LGPL-2.1-only
+PackageCopyrightText: NOASSERTION
+PackageComment: Plus the OCCT LGPL exception (OCCT_LGPL_EXCEPTION.txt); combines under AGPL-3.0-only via LGPL-2.1 section 3 and GPLv3 section 13.
+
+PackageName: OpenCSG
+SPDXID: SPDXRef-Dep-OpenCSG
+PackageVersion: 1.4.2
+PackageDownloadLocation: https://github.com/floriankirsch/OpenCSG/archive/refs/tags/opencsg-1-4-2-release.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: 51afe0db79af8386e2027d56d685177135581e0ee82ade9d7f2caff8deab5ec5
+PackageLicenseConcluded: GPL-2.0-or-later
+PackageLicenseDeclared: GPL-2.0-or-later
+PackageCopyrightText: NOASSERTION
+PackageComment: Used at GPLv3; combines under AGPL-3.0-only via GPLv3 section 13.
+
+PackageName: OpenCV
+SPDXID: SPDXRef-Dep-OpenCV
+PackageVersion: 4.6.0
+PackageDownloadLocation: https://github.com/opencv/opencv/archive/refs/tags/4.6.0.tar.gz
+FilesAnalyzed: false
+PackageChecksum: SHA256: 1ec1cba65f9f20fe5a41fda1586e01c70ea0c9a6d7b67c9e13edf0cfe2239277
+PackageLicenseConcluded: Apache-2.0
+PackageLicenseDeclared: Apache-2.0
+PackageCopyrightText: NOASSERTION
+
+PackageName: OpenEXR
+SPDXID: SPDXRef-Dep-OpenEXR
+PackageVersion: 2.5.5
+PackageDownloadLocation: https://github.com/AcademySoftwareFoundation/openexr/archive/refs/tags/v2.5.5.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: 0307a3d7e1fa1e77e9d84d7e9a8694583fbbbfd50bdc6884e2c96b8ef6b902de
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseDeclared: BSD-3-Clause
+PackageCopyrightText: NOASSERTION
+
+PackageName: OpenSSL
+SPDXID: SPDXRef-Dep-OpenSSL
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: Apache-2.0
+PackageLicenseDeclared: Apache-2.0
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine system OpenSSL 3, dynamically linked through libssl3 and libcrypto3. Version resolved from Alpine edge at build time; see openssl3.patch and SBOM.md.
+
+PackageName: OpenVDB
+SPDXID: SPDXRef-Dep-OpenVDB
+PackageVersion: a68fd58d0e2b85f01adeb8b13d7555183ab10aa5
+PackageDownloadLocation: https://github.com/tamasmeszaros/openvdb/archive/a68fd58d0e2b85f01adeb8b13d7555183ab10aa5.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: f353e7b99bd0cbfc27ac9082de51acf32a8bc0b3e21ff9661ecca6f205ec1d81
+PackageLicenseConcluded: MPL-2.0
+PackageLicenseDeclared: MPL-2.0
+PackageCopyrightText: NOASSERTION
+
+PackageName: libpng
+SPDXID: SPDXRef-Dep-PNG
+PackageVersion: 1.6.35
+PackageDownloadLocation: https://github.com/glennrp/libpng/archive/refs/tags/v1.6.35.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: 3d22d46c566b1761a0e15ea397589b3a5f36ac09b7c785382e6470156c04247f
+PackageLicenseConcluded: Libpng
+PackageLicenseDeclared: Libpng
+PackageCopyrightText: NOASSERTION
+
+PackageName: Qhull
+SPDXID: SPDXRef-Dep-Qhull
+PackageVersion: 8.0.2
+PackageDownloadLocation: https://github.com/qhull/qhull/archive/v8.0.2.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: a378e9a39e718e289102c20d45632f873bfdc58a7a5f924246ea4b176e185f1e
+PackageLicenseConcluded: Qhull
+PackageLicenseDeclared: Qhull
+PackageCopyrightText: NOASSERTION
+
+PackageName: oneTBB
+SPDXID: SPDXRef-Dep-TBB
+PackageVersion: 2021.5.0
+PackageDownloadLocation: https://github.com/oneapi-src/oneTBB/archive/refs/tags/v2021.5.0.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: 83ea786c964a384dd72534f9854b419716f412f9d43c0be88d41874763e7bb47
+PackageLicenseConcluded: Apache-2.0
+PackageLicenseDeclared: Apache-2.0
+PackageCopyrightText: NOASSERTION
+
+PackageName: wxWidgets
+SPDXID: SPDXRef-Dep-wxWidgets
+PackageVersion: v3.3.2
+PackageDownloadLocation: git+https://github.com/SoftFever/Orca-deps-wxWidgets@v3.3.2
+FilesAnalyzed: false
+PackageLicenseConcluded: wxWindows
+PackageLicenseDeclared: wxWindows
+PackageCopyrightText: NOASSERTION
+PackageComment: Fetched as a git checkout at tag v3.3.2, not a hashed archive.
+
+PackageName: zlib
+SPDXID: SPDXRef-Dep-ZLIB
+PackageVersion: 1.2.13
+PackageDownloadLocation: https://github.com/madler/zlib/archive/refs/tags/v1.2.13.zip
+FilesAnalyzed: false
+PackageChecksum: SHA256: c2856951bbf30e30861ace3765595d86ba13f2cf01279d901f6c62258c57f4ff
+PackageLicenseConcluded: Zlib
+PackageLicenseDeclared: Zlib
+PackageCopyrightText: NOASSERTION
+
+PackageName: admesh
+SPDXID: SPDXRef-Vendored-Admesh
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: GPL-2.0-or-later
+PackageLicenseDeclared: GPL-2.0-or-later
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/admesh/; used at GPLv3 in the AGPL combined work.
+
+PackageName: agg
+SPDXID: SPDXRef-Vendored-Agg
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseDeclared: BSD-3-Clause
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/agg/ (Modified BSD per its copying file).
+
+PackageName: ankerl-unordered_dense
+SPDXID: SPDXRef-Vendored-Ankerl
+PackageVersion: 4.5.0
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/ankerl/.
+
+PackageName: clipper
+SPDXID: SPDXRef-Vendored-Clipper
+PackageVersion: 6.4.2
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: BSL-1.0
+PackageLicenseDeclared: BSL-1.0
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/clipper/.
+
+PackageName: clipper2
+SPDXID: SPDXRef-Vendored-Clipper2
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: BSL-1.0
+PackageLicenseDeclared: BSL-1.0
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/clipper2/.
+
+PackageName: earcut
+SPDXID: SPDXRef-Vendored-Earcut
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: ISC
+PackageLicenseDeclared: ISC
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/earcut/.
+
+PackageName: expat-vendored
+SPDXID: SPDXRef-Vendored-Expat
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/expat/.
+
+PackageName: fast_float
+SPDXID: SPDXRef-Vendored-FastFloat
+PackageVersion: 2.0.0
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/fast_float/; MIT grant text in the header.
+
+PackageName: glu-libtess
+SPDXID: SPDXRef-Vendored-GluLibtess
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: SGI-B-2.0
+PackageLicenseDeclared: SGI-B-2.0
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/glu-libtess/ (Mesa GLU tessellator subset).
+
+PackageName: hidapi
+SPDXID: SPDXRef-Vendored-Hidapi
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: GPL-3.0-only
+PackageLicenseDeclared: GPL-3.0-only OR BSD-3-Clause
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/hidapi/; header offers GPLv3, BSD-style, or original HIDAPI license. This package uses the GPL 3 option and installs its full text.
+
+PackageName: slic3r-hints-tool
+SPDXID: SPDXRef-Vendored-Hints
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: AGPL-3.0-only
+PackageLicenseDeclared: AGPL-3.0-only
+PackageCopyrightText: NOASSERTION
+PackageComment: Project-owned gettext helper at deps_src/hints/, no header; under the repo license.
+
+PackageName: imgui
+SPDXID: SPDXRef-Vendored-Imgui
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/imgui/.
+
+PackageName: imguizmo
+SPDXID: SPDXRef-Vendored-Imguizmo
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/imguizmo/.
+
+PackageName: libigl
+SPDXID: SPDXRef-Vendored-Libigl
+PackageVersion: 2.5.0
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: MPL-2.0
+PackageLicenseDeclared: MPL-2.0
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored subset at deps_src/libigl/.
+
+PackageName: libnest2d
+SPDXID: SPDXRef-Vendored-Libnest2d
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: LGPL-3.0-only
+PackageLicenseDeclared: LGPL-3.0-only
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/libnest2d/.
+
+PackageName: mcut
+SPDXID: SPDXRef-Vendored-Mcut
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: GPL-3.0-or-later
+PackageLicenseDeclared: GPL-3.0-or-later
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/mcut/; open-source option used.
+
+PackageName: md4c
+SPDXID: SPDXRef-Vendored-Md4c
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/md4c/.
+
+PackageName: mdns
+SPDXID: SPDXRef-Vendored-Mdns
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: LicenseRef-Public-Domain AND AGPL-3.0-only
+PackageLicenseDeclared: LicenseRef-Public-Domain AND AGPL-3.0-only
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/mdns/; mdns.h/c public domain, cxmdns wrapper AGPL-3.0.
+
+PackageName: minilzo
+SPDXID: SPDXRef-Vendored-Minilzo
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: GPL-2.0-or-later
+PackageLicenseDeclared: GPL-2.0-or-later
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/minilzo/; used at GPLv3 in the AGPL combined work.
+
+PackageName: miniz
+SPDXID: SPDXRef-Vendored-Miniz
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/miniz/.
+
+PackageName: nanosvg-vendored
+SPDXID: SPDXRef-Vendored-Nanosvg
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: Zlib
+PackageLicenseDeclared: Zlib
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/nanosvg/.
+
+PackageName: nlohmann-json
+SPDXID: SPDXRef-Vendored-Nlohmann
+PackageVersion: 3.10.4
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/nlohmann/.
+
+PackageName: qhull-vendored
+SPDXID: SPDXRef-Vendored-Qhull
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: Qhull
+PackageLicenseDeclared: Qhull
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/qhull/.
+
+PackageName: qoi
+SPDXID: SPDXRef-Vendored-Qoi
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/qoi/.
+
+PackageName: semver.c
+SPDXID: SPDXRef-Vendored-Semver
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/semver/.
+
+PackageName: Shiny
+SPDXID: SPDXRef-Vendored-Shiny
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/Shiny/.
+
+PackageName: stb_dxt
+SPDXID: SPDXRef-Vendored-StbDxt
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseDeclared: BSD-2-Clause
+PackageCopyrightText: NOASSERTION
+PackageComment: Vendored at deps_src/stb_dxt/.
+
+PackageName: cairo
+SPDXID: SPDXRef-Sys-Cairo
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: dbus
+SPDXID: SPDXRef-Sys-Dbus
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: expat-system
+SPDXID: SPDXRef-Sys-Expat
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: fontconfig
+SPDXID: SPDXRef-Sys-Fontconfig
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: gdk-pixbuf
+SPDXID: SPDXRef-Sys-GdkPixbuf
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: glib
+SPDXID: SPDXRef-Sys-Glib
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: gspell
+SPDXID: SPDXRef-Sys-Gspell
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: gstreamer
+SPDXID: SPDXRef-Sys-Gstreamer
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: gst-plugins-bad
+SPDXID: SPDXRef-Sys-GstBad
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: gtk+3.0
+SPDXID: SPDXRef-Sys-Gtk3
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: hicolor-icon-theme
+SPDXID: SPDXRef-Sys-Hicolor
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge data package; license per Alpine aports at build time.
+
+PackageName: libgcc
+SPDXID: SPDXRef-Sys-Libgcc
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: libstdc++
+SPDXID: SPDXRef-Sys-Libstdcxx
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: libx11
+SPDXID: SPDXRef-Sys-Libx11
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: libxkbcommon
+SPDXID: SPDXRef-Sys-Libxkbcommon
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: mesa
+SPDXID: SPDXRef-Sys-Mesa
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: pango
+SPDXID: SPDXRef-Sys-Pango
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: wayland-libs-client
+SPDXID: SPDXRef-Sys-WaylandClient
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: wayland-libs-egl
+SPDXID: SPDXRef-Sys-WaylandEgl
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: webkit2gtk-4.1
+SPDXID: SPDXRef-Sys-Webkit
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+PackageName: zlib-system
+SPDXID: SPDXRef-Sys-Zlib
+PackageVersion: NOASSERTION
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageComment: Alpine edge system library, dynamically linked; license per Alpine aports at build time.
+
+LicenseID: LicenseRef-Public-Domain
+ExtractedText: <text>Public domain dedication covering deps_src/mdns/mdns.h and mdns.c by Mattias Jansson, per deps_src/mdns/NOTICE.md in the OrcaSlicer v2.4.2 tree.</text>
+LicenseName: Public domain dedication (mjansson mdns)
+LicenseCrossReference: https://github.com/mjansson/mdns
+LicenseComment: No SPDX-listed identifier covers a bare public-domain dedication, so a LicenseRef is used.
+
+Relationship: SPDXRef-DOCUMENT DESCRIBES SPDXRef-Packaging
+Relationship: SPDXRef-Packaging DEPENDS_ON SPDXRef-OrcaSlicer
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-Blosc
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-Boost
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-Cereal
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-CGAL
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-CURL
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-Draco
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-Eigen
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-Expat
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-Freetype
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-GLEW
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-GLFW
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-GMP
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-JPEG
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-Libnoise
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-MPFR
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-NanoSVG
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-NLopt
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-OCCT
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-OpenCSG
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-OpenCV
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-OpenEXR
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Dep-OpenSSL
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-OpenVDB
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-PNG
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-Qhull
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-TBB
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-wxWidgets
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Dep-ZLIB
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Admesh
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Agg
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Ankerl
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Clipper
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Clipper2
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Earcut
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Expat
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-FastFloat
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-GluLibtess
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Hidapi
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Hints
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Imgui
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Imguizmo
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Libigl
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Libnest2d
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Mcut
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Md4c
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Mdns
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Minilzo
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Miniz
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Nanosvg
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Nlohmann
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Qhull
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Qoi
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Semver
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-Shiny
+Relationship: SPDXRef-OrcaSlicer STATIC_LINK SPDXRef-Vendored-StbDxt
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Cairo
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Dbus
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Expat
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Fontconfig
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-GdkPixbuf
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Glib
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Gspell
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Gstreamer
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-GstBad
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Gtk3
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Hicolor
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Libgcc
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Libstdcxx
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Libx11
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Libxkbcommon
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Mesa
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Pango
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-WaylandClient
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-WaylandEgl
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Webkit
+Relationship: SPDXRef-OrcaSlicer DYNAMIC_LINK SPDXRef-Sys-Zlib

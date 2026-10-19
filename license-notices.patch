@@ -1,0 +1,48 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 DH0516
+# Display library notices and the installed license/source records.
+--- a/src/slic3r/GUI/AboutDialog.cpp
++++ b/src/slic3r/GUI/AboutDialog.cpp
+@@ -96,18 +96,22 @@
+         { "fast_float",                                     "",      "https://github.com/fastfloat/fast_float" },
+         { "GLAD (Multi-Language GL Loader-Generator)",       "",      "https://github.com/Dav1dde/glad" },
+         { "GLFW",                                           "",      "https://www.glfw.org" },
++        { "GMP", "Copyright 1991, 1993-1997, 1999-2016, 2020 Free Software Foundation, Inc.", "https://gmplib.org" },
+         { "GNU gettext",                                    "",      "https://www.gnu.org/software/gettext" },
+         { "ImGUI",                                          "",      "https://github.com/ocornut/imgui" },
+         { "ImGuizmo",                                       "",      "https://github.com/CedricGuillemet/ImGuizmo" },
+         { "Libigl",                                         "",      "https://libigl.github.io" },
+         { "libnest2d",                                      "",      "https://github.com/tamasmeszaros/libnest2d" },
+         { "lib_fts",                                        "",      "https://www.forrestthewoods.com" },
++        { "Libnoise", "Copyright (C) 2003, 2004 Jason Bevins", "https://sourceforge.net/projects/libnoise/" },
++        { "MPFR", "Copyright 1999-2025 Free Software Foundation, Inc.", "https://www.mpfr.org" },
++        { "NLopt", "Copyright (c) 2007-2014 Massachusetts Institute of Technology; Copyright Jan Vlcek, 2007; Copyright Ladislav Luksan, 2007", "https://github.com/stevengj/nlopt" },
+         { "Mesa 3D",                                        "",      "https://mesa3d.org" },
+         { "Miniz",                                          "",      "https://github.com/richgel999/miniz" },
+         { "Nanosvg",                                        "",      "https://github.com/memononen/nanosvg" },
+         { "nlohmann/json",                                  "",      "https://json.nlohmann.me" },
+         { "Qhull",                                          "",      "http://qhull.org" },
+-        { "Open Cascade",                                   "",      "https://www.opencascade.com" },
++        { "Open Cascade", "Copyright (c) 1991-1999 Matra Datavision; Copyright (c) 1999-2014 OPEN CASCADE SAS",      "https://www.opencascade.com" },
+         { "OpenGL",                                         "",      "https://www.opengl.org" },
+         { "PoEdit",                                         "",      "https://poedit.net" },
+         { "PrusaSlicer",                                    "",      "https://www.prusa3d.com" },
+@@ -153,10 +157,18 @@
+         _L("Libraries"),
+         _L("This software uses open source components whose copyright and other proprietary rights belong to their respective owners"));
+ 
++    text += "<p>GMP, MPFR, libnest2d, libnoise, NLopt, and Open Cascade use the GNU LGPL. "
++            "Library notices, GPL/LGPL copies, and applicable exceptions are installed in "
++            "/usr/share/licenses/OrcaSlicer/third-party/. "
++            "Source and relinking instructions: /usr/share/licenses/OrcaSlicer/THIRD_PARTY_NOTICES.md.</p>";
++
+     for (auto& entry : m_entries) {
+         text += format_wxstr(
+                     "%s<br/>"
+                     , entry.lib_name);
++
++        if (!entry.copyright.empty())
++            text += format_wxstr("%s<br/>", entry.copyright);
+ 
+          text += wxString::Format(
+                     "<a href=\"%s\">%s</a><br/><br/>"
